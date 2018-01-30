@@ -5,7 +5,7 @@ class PHPHelper
 {
 	/**
 	*/
-	public static function duration2MS($duration = 0)
+	public static function duration2Hms($duration = 0)
     {
 
         if (!is_numeric($duration)) {
@@ -16,12 +16,12 @@ class PHPHelper
             return "00:00";
         }
 
-        if ($duration > 60) {
-            $minute = intval($duration / 60);
-            $second = $duration % 60;
-            $time = $minute . ":" . gmstrftime('%S', $second);
+        if ($duration > 3600) {
+            $hour = intval($duration / 3600);
+            $second = $duration % 3600;
+            $time = $hour . ":" . gmstrftime('%M:%S', $second);
         } else {
-            $time = gmstrftime('%M:%S', $duration);
+            $time = gmstrftime('%H:%M:%S', $duration);
         }
 
         return $time;
