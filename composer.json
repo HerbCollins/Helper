@@ -1,0 +1,21 @@
+{
+    "name": "maker/php-helper",
+    "description": "php helper",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "maker",
+            "email": "maker68@163.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">= 5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Helper\\": "src/Helper"
+        }
+    }
+}
